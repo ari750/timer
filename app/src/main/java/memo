@@ -1,0 +1,282 @@
+2008년 iphone
+2009sus goolge - android(오픈소스)
+samsung 스마트폰 출시
+
+java
+oop 개념 : 객체지향언어은 상추다.
+-- Object Oriented Programming(4)
+-(1)Encapsulation 클래스를 은닉화해라
+-(2)Inheritance 클래스를 상속구조로 작성해라
+-(3)Abstraction 인터페이스를 통한 추상화를 하라
+-(4)Poly Morphism 다형성을 염두에 두고 클래스를 작성하라
+
+MVC 패턴: Web서버 구축시
+- Model(서버)
+- View(화면)
+- Controller(데이터전송)
+
+MVVM 패턴: App서버 구축시
+- Model(서버)
+- View(화면)
+- ViewModel(일체화 된 데이터전송)
+
+
+설정 패키지
+1.JDK: Java 8
+2.SDK, ADT:Android studio(IDE) 2.2.2
+3.Emulator : Genymotion 2.8.1
+4.Version Control: Git 2.1 64bit
+
+Shortcuts
+Win+R> cmd> java -version
+설정
+CAS: Ctr + Alt + S
+-1.Auto Import, check All
+-2.Appearance, show line numbers
+-3.Genymotion, Plugins install > Browse repositories
+
+Go line :Ctrl + g
+Copy line :Ctrl +d
+Delte line:Ctrl + y
+Auto Complie :Alt + Enter
+Auto Import:Alt + Insert
+
+Convention Naming :
+대...대...:Pascal -> 클래스/인터페이스
+소...대...:Carmale 낙타표기법/변수
+under score: Static Source 표기법
+
+1.Obejct는 속성(prorerty)과 기능(method)의 합니다.
+2.property는 filed에 존재하고
+3.method는 area에 존재한다.
+
+field는 속성을 담당하므로 연산을 하지 않고, 선언만 한다.
+area는 기능을 담당하므로 반드시 연산을 해야한다.
+
+Java 선언하는 방법
+class ID{}
+void ID(){}
+switch(){}, for(){}, if(){}
+
+class TestClass{}
+void testMethod(){}
+
+
+
+--Github
+When Create
+git init
+git add -A
+git config --global user.email "ari750@daum.net"
+git config --global user.name "ari750"
+git commit -m "first commit"
+git remote add origin https://github.com/ari750/calculator.git
+git push -u origin master
+
+When Update
+git add -A
+git commit -m "final commit"
+git push -u origin master
+
+
+//12월 17일
+Web Server: MVC pattern
+개발 순서: Model -> View -> Controller
+App Server: MVVM(MVP) pattern
+View:
+Model
+Activity
+
+Activity에 Button btJoin,btLogin; 넘기고, Instance로 만든다.
+
+
+EditText etName,etID,etPass,etTEl,etAddr;
+Button btSubmit, btCancel;
+
+데이타 케이블 준비해오기
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULT"/>
+
+</LinearLayout>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+     <Button
+        android:id="@+id/btJoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JOIN"
+        android:textSize="20dp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textSize="20dp"
+        android:gravity="center"/>
+</LinearLayout>
+
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        /*
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etAddr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:textSize="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+
+btCall,btMap,btMessage,btUpdate,btDelete,btList
+
+main
+-> login -> list -> detail -> update, find
+-> join
+Cancel -> list
+
+
+//생성
+git init
+git add -A
+git commit -m "first commit"
+git remote add origin https://github.com/ari750/memberapp.git
+git push -u origin master
+
+//update
+git add -A
+git commit -m "final commit"
+git push -u origin master
+
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ID :"/>
+        <EditText
+            android:id="@+id/etID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="INPUT ID" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="PASSWORD :"/>
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="INPUT Password" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button
+            android:id="@+id/btSubmit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btCancel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:textSize="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+ </LinearLayout>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+        android:id="@+id/etID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textSize="20dp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:textSize="20dp"
+        android:gravity="center"/>
+</LinearLayout>
+
+
+
+
